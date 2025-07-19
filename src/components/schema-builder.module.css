@@ -1,0 +1,530 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.mainWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.tabsContainer {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  min-width: 800px;
+}
+
+.tabBar {
+  margin: 0 20px;
+  border-bottom: 3px solid #f0f0f0;
+  border-radius: 8px 8px 0 0;
+}
+
+.tabLabel {
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.spinIcon {
+  animation: spin 2s linear infinite;
+}
+
+.blinkIcon {
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.builderTab {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 500px;
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.previewTab {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  min-height: 500px;
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.floatingElement1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: floating 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.floatingElement2 {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  animation: floating 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: floating 3s ease-in-out infinite;
+}
+
+.contentContainer {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.previewTitle {
+  margin: 0;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-top: 8px;
+  display: block;
+}
+
+.fieldsContainer {
+  margin-bottom: 24px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 3px dashed #dee2e6;
+  border-radius: 16px;
+  animation: floating 3s ease-in-out infinite;
+}
+
+.emptyStateText {
+  font-size: 18px;
+}
+
+.addFieldContainer {
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  border: 2px solid #dee2e6;
+}
+
+.addFieldButton {
+  border-radius: 12px;
+  height: 50px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.addFieldButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+}
+
+.fieldRowContainer {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: left center;
+  perspective: 1000px;
+}
+
+.fieldRowDeleting {
+  transform: translateX(-100%) scale(0.8) rotateY(90deg);
+  opacity: 0;
+}
+
+.fieldRowNew {
+  transform: scale(1.05);
+}
+
+.fieldRowNormal {
+  transform: translateX(0) scale(1) rotateY(0deg);
+}
+
+.fieldCard {
+  margin-bottom: 12px;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.fieldCardHovered {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.fieldCardNormal {
+  transform: translateY(0) scale(1);
+}
+
+.fieldCardBody {
+  padding: 16px;
+}
+
+.fieldInputContainer {
+  position: relative;
+}
+
+.fieldInput {
+  min-width: 200px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.starIndicator {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 0.5s ease-in-out;
+}
+
+.starIcon {
+  color: white;
+  font-size: 8px;
+}
+
+.typeSelect {
+  min-width: 140px;
+  border-radius: 8px;
+}
+
+.typeSelectDropdown {
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.typeOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 4px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.typeOptionHovered {
+  transform: translateX(4px);
+}
+
+.typeOptionNormal {
+  background: transparent;
+  transform: translateX(0);
+}
+
+.typeOptionText {
+  font-weight: 500;
+}
+
+.typeIcon {
+  font-size: 12px;
+}
+
+.deleteButton {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.deleteButtonHovered {
+  background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+  box-shadow: 0 6px 20px rgba(255, 77, 79, 0.4);
+  transform: scale(1.15) rotate(-10deg);
+}
+
+.deleteButtonNormal {
+  transform: scale(1) rotate(0deg);
+}
+
+.deleteButtonDeleting {
+  background: #ff4d4f;
+  color: white;
+}
+
+.fieldTypeDisplay {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.shimmerEffect {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s ease-in-out;
+}
+
+.shimmerHidden {
+  left: -100%;
+}
+
+.shimmerVisible {
+  left: 0%;
+}
+
+.fieldTypeText {
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.nestedSection {
+  margin-top: 8px;
+}
+
+.nestedDivider {
+  margin: 12px 0;
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+.nestedBadge {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.nestedContainer {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px dashed #d9d9d9;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nestedEmptyState {
+  text-align: center;
+  padding: 20px;
+  animation: floating 3s ease-in-out infinite;
+}
+
+.nestedEmptyText {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.addNestedButton {
+  width: 100%;
+  border-radius: 10px;
+  height: 40px;
+  border: 2px dashed #52c41a;
+  color: #52c41a;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.addNestedButtonHovered {
+  background: linear-gradient(135deg, #f6ffed 0%, #d9f7be 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(82, 196, 26, 0.3);
+  border-color: #52c41a;
+  border-style: solid;
+}
+
+.addNestedButtonNormal {
+  background: transparent;
+  transform: translateY(0) scale(1);
+  box-shadow: none;
+  border-style: dashed;
+}
+
+.codePreviewCard {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.codeHeader {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  padding: 16px 24px;
+  border-bottom: 2px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.codeIcon {
+  color: #fff;
+  font-size: 16px;
+}
+
+.codeFileName {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.windowControls {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.windowControl {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.windowControlRed {
+  background: #ff5f57;
+}
+
+.windowControlYellow {
+  background: #ffbd2e;
+}
+
+.windowControlGreen {
+  background: #28ca42;
+}
+
+.codeContent {
+  background: #1a1a1a;
+  color: #e6e6e6;
+  padding: 32px;
+  margin: 0;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-x: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
