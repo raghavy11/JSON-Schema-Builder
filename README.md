@@ -1,13 +1,102 @@
-# React + Vite
+# 🛠️ JSON Schema Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive React component for building JSON schemas with a beautiful UI and smooth animations. Create complex nested JSON structures with an intuitive drag-and-drop interface.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🎨 Beautiful UI**: Modern gradient backgrounds with smooth animations
+- **🔄 Real-time Preview**: Live JSON schema generation as you build
+- **🌳 Nested Fields**: Support for unlimited nesting levels
+- **🎭 Interactive Animations**: Hover effects, transitions, and micro-interactions
+- **📱 Responsive Design**: Works perfectly on all screen sizes
+- **🎯 Type Safety**: Built with modern React patterns and best practices
+- **⚡ Performance Optimized**: Efficient re-rendering and state management
+- **🎪 Visual Feedback**: Color-coded field types and validation states
 
-## Expanding the ESLint configuration
+## 🚀 Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# JSON-Schema-Builder" 
+\`\`\`bash
+
+# Clone the repository
+
+git clone https://github.com/yourusername/json-schema-builder.git
+
+# Navigate to project directory
+
+cd json-schema-builder
+
+# Install dependencies
+
+npm install
+
+# Start development server
+
+npm run dev
+\`\`\`
+
+Visit \`http://localhost:3000\` to see the component in action!
+
+## 📦 Installation
+
+### Prerequisites
+
+- Node.js 16+
+- React 18+
+- Next.js 13+ (if using App Router)
+
+### Quick Setup
+
+1. **Install dependencies:**
+   \`\`\`bash
+   npm install antd react react-dom
+   \`\`\`
+
+2. **Copy the component files:**
+   \`\`\`
+   src/
+   ├── components/
+   │ ├── schema-builder.jsx
+   │ └── schema-builder.module.css
+   └── utils/
+   └── convertToJSONSchema.js
+   \`\`\`
+
+## 🏗️ Component Structure
+
+### File Organization
+
+\`\`\`
+schema-builder/
+├── schema-builder.jsx # Main React component
+├── schema-builder.module.css # Styled CSS modules
+└── utils/
+└── convertToJSONSchema.js # Schema conversion utility
+\`\`\`
+
+### Key Components
+
+- **SchemaBuilder**: Main container component
+- **FieldRow**: Individual field component with nesting support
+- **Field Types**: String, Number, Nested object support
+- **JSON Preview**: Real-time schema preview tab
+
+## 👥 Authors
+
+- **Raghav Yadav** – _Frontend Development & JSON Schema Logic_ – [@raghavydv](https://github.com/raghavydv)
+
+## 🙏 Acknowledgments
+
+- **Ant Design** - For the beautiful UI components
+- **React Team** - For the amazing framework
+- **CSS Modules** - For scoped styling solution
+- **Community Contributors** - For feedback and improvements
+
+## 🌟 Show Your Support
+
+If this project helped you, please give it a ⭐ on GitHub!
+
+---
+
+**Made with ❤️ by [Ragghav Yadav](https://github.com/raghavyadav)**
+
+_Happy Schema Building! 🛠️✨_
